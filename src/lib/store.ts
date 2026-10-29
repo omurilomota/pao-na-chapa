@@ -100,14 +100,14 @@ export async function ensureDemoData() {
     const customerRows = await tx
       .insert(customers)
       .values([
-        { tenantId: tenant.id, name: "Bruna Costa", phone: "18996112040", email: "bruna.costa@email.com", loyaltyPoints: 246, tier: "ouro", lifetimeSpend: "1286.50", lastOrderAt: atTime(0, 8, 31) },
-        { tenantId: tenant.id, name: "Marcos Vieira", phone: "18996223351", loyaltyPoints: 92, tier: "prata", lifetimeSpend: "684.20", lastOrderAt: atTime(0, 8, 17) },
-        { tenantId: tenant.id, name: "Juliana Moraes", phone: "18996334462", loyaltyPoints: 181, tier: "prata", lifetimeSpend: "918.90", lastOrderAt: atTime(0, 7, 56) },
-        { tenantId: tenant.id, name: "Rafael Lima", phone: "18996445573", loyaltyPoints: 42, tier: "bronze", lifetimeSpend: "231.80", lastOrderAt: atTime(0, 7, 42) },
-        { tenantId: tenant.id, name: "Isabela Nunes", phone: "18996556684", loyaltyPoints: 315, tier: "ouro", lifetimeSpend: "1890.00", lastOrderAt: atTime(-1, 16, 25) },
-        { tenantId: tenant.id, name: "Enzo Carvalho", phone: "18996667795", loyaltyPoints: 67, tier: "bronze", lifetimeSpend: "397.50", lastOrderAt: atTime(-1, 15, 48) },
-        { tenantId: tenant.id, name: "Camila Rocha", phone: "18996778806", loyaltyPoints: 124, tier: "prata", lifetimeSpend: "738.60", lastOrderAt: atTime(-2, 9, 12) },
-        { tenantId: tenant.id, name: "Paulo Ferreira", phone: "18996889917", loyaltyPoints: 28, tier: "bronze", lifetimeSpend: "164.90", lastOrderAt: atTime(-2, 7, 9) },
+        { tenantId: tenant.id, name: "Bruna Costa", phone: "18999990201", email: "bruna.costa@exemplo.com", loyaltyPoints: 246, tier: "ouro", lifetimeSpend: "1286.50", lastOrderAt: atTime(0, 8, 31) },
+        { tenantId: tenant.id, name: "Marcos Vieira", phone: "18999990202", loyaltyPoints: 92, tier: "prata", lifetimeSpend: "684.20", lastOrderAt: atTime(0, 8, 17) },
+        { tenantId: tenant.id, name: "Juliana Moraes", phone: "18999990203", loyaltyPoints: 181, tier: "prata", lifetimeSpend: "918.90", lastOrderAt: atTime(0, 7, 56) },
+        { tenantId: tenant.id, name: "Rafael Lima", phone: "18999990204", loyaltyPoints: 42, tier: "bronze", lifetimeSpend: "231.80", lastOrderAt: atTime(0, 7, 42) },
+        { tenantId: tenant.id, name: "Isabela Nunes", phone: "18999990205", loyaltyPoints: 315, tier: "ouro", lifetimeSpend: "1890.00", lastOrderAt: atTime(-1, 16, 25) },
+        { tenantId: tenant.id, name: "Enzo Carvalho", phone: "18999990206", loyaltyPoints: 67, tier: "bronze", lifetimeSpend: "397.50", lastOrderAt: atTime(-1, 15, 48) },
+        { tenantId: tenant.id, name: "Camila Rocha", phone: "18999990207", loyaltyPoints: 124, tier: "prata", lifetimeSpend: "738.60", lastOrderAt: atTime(-2, 9, 12) },
+        { tenantId: tenant.id, name: "Paulo Ferreira", phone: "18999990208", loyaltyPoints: 28, tier: "bronze", lifetimeSpend: "164.90", lastOrderAt: atTime(-2, 7, 9) },
       ])
       .returning();
 
@@ -192,8 +192,8 @@ export async function ensureDemoData() {
       { tenantId: tenant.id, eventDate: calendarDate(3), capacity: 8, bookedQuantity: 8, isBlocked: true, notes: "Capacidade máxima" },
     ]);
     await tx.insert(corporateAccounts).values([
-      { tenantId: tenant.id, companyName: "Clínica São Lucas", contactName: "Mariana Lopes", phone: "18997001122", email: "compras@clinicasaolucas.com.br", billingCycle: "monthly", creditLimit: "900.00", status: "active" },
-      { tenantId: tenant.id, companyName: "Colégio Integração", contactName: "Roberto Alves", phone: "18997002233", billingCycle: "weekly", creditLimit: "650.00", status: "active" },
+      { tenantId: tenant.id, companyName: "Clínica São Lucas", contactName: "Mariana Lopes", phone: "18999990209", email: "compras@exemplo.com", billingCycle: "monthly", creditLimit: "900.00", status: "active" },
+      { tenantId: tenant.id, companyName: "Colégio Integração", contactName: "Roberto Alves", phone: "18999990210", billingCycle: "weekly", creditLimit: "650.00", status: "active" },
     ]);
     await tx.insert(verticalPlugins).values([
       { tenantId: tenant.id, key: "bakery", enabled: true, configuration: { reservations: true, customOrders: true, dayparts: true } },
