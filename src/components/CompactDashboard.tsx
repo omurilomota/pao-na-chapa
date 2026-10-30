@@ -144,6 +144,11 @@ export default function CompactDashboard() {
         {view === "marketing" && <Panel title={`${coupons.length} cupons`}><div className="c-coupon-list">{coupons.map((coupon) => <article key={coupon.id}><span><Icon name="percent" /></span><div><strong>{coupon.title}</strong><small>{coupon.code} · {coupon.discountType === "percent" ? `${Number(coupon.discountValue)}%` : money(coupon.discountValue)}</small></div><p><strong>{coupon.redemptionCount}</strong><small>resgates</small></p><Status value={coupon.isActive ? "ready" : "cancelled"} /></article>)}</div></Panel>}
 
         {view === "strategy" && <Strategy />}
+        <p className="c-dev-credit">
+          <a href="https://wa.me/5518998133524" target="_blank" rel="noreferrer" aria-label="Falar com Murilo Mota no WhatsApp">
+            Desenvolvido por Murilo Mota · 55 (18) 99813-3524
+          </a>
+        </p>
       </main>
     </div>
 
